@@ -3,56 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VELORAÉ — The Scent of Distinction</title>
-  <meta name="description" content="Discover luxury fragrances crafted for those who refuse to be ordinary. Premium haute parfumerie with Cash on Delivery nationwide.">
+  <title>VELORAÉ | The Scent of Distinction</title>
+  <meta name="description" content="Discover luxury fragrances crafted for those who refuse to be ordinary. Haute Parfumerie with Cash on Delivery worldwide.">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="VELORAÉ — The Scent of Distinction">
-  <meta property="og:description" content="Luxury fragrance house offering artisanal scents delivered with Cash on Delivery.">
-  <meta property="og:type" content="website">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- External CDNs: Swiper & GSAP -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header class="header" id="header">
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="brand-logo" aria-label="VELORAÉ Home">VELORAÉ</a>
-      
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#collection" class="nav-link">Collection</a></li>
-          <li><a href="#bestsellers" class="nav-link">Bestsellers</a></li>
-          <li><a href="#philosophy" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#footer" class="nav-link">Contact</a></li>
-        </ul>
+      <a href="#" class="nav-logo">
+        <span class="logo-text">VELORAÉ</span>
+        <span class="logo-sub">PARIS</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#collection" class="nav-link">Collection</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="cart-trigger" id="cart-trigger" aria-label="View Shopping Bag">
+        <button class="cart-trigger" id="cartBtn" aria-label="Open Shopping Bag">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <path d="M6 2L3 6v14a2 2 2 0 0 0 2 2h14a2 2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
           </svg>
-          <span class="cart-badge" id="cart-badge">0</span>
+          <span class="cart-count" id="cartBadge">0</span>
         </button>
-        
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
           <span></span>
           <span></span>
         </button>
@@ -60,365 +53,431 @@
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="swiper hero-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide hero-slide">
-            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1600" alt="VELORAÉ NOIR" class="hero-bg" loading="eager">
-          </div>
-          <div class="swiper-slide hero-slide">
-            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1600" alt="ÉCLAT" class="hero-bg" loading="lazy">
-          </div>
-          <div class="swiper-slide hero-slide">
-            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=1600" alt="AMBRE ROYALE" class="hero-bg" loading="lazy">
-          </div>
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-slider swiper" id="heroSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-img" style="background-image: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1800&auto=format&fit=crop');"></div>
         </div>
-      </div>
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-        <p class="tagline">The Scent of Distinction</p>
-        <h1 class="hero-title">Leave a Memory Behind.</h1>
-        <p class="hero-subtitle">Discover fragrances crafted for those who refuse to be ordinary.</p>
-        <div class="hero-cta-group">
-          <a href="#collection" class="btn btn-primary">Explore Collection</a>
-          <a href="#bestsellers" class="btn btn-secondary">Shop Bestsellers</a>
+        <div class="swiper-slide">
+          <div class="slide-img" style="background-image: url('https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1800&auto=format&fit=crop');"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- Collection Section -->
-    <section class="section collection-section" id="collection">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Haute Parfumerie</span>
-          <h2 class="section-title">The Complete Collection</h2>
-          <div class="gold-divider"></div>
+        <div class="swiper-slide">
+          <div class="slide-img" style="background-image: url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1800&auto=format&fit=crop');"></div>
         </div>
-
-        <div class="product-grid" id="product-grid">
-          <!-- Dynamic JS Injection -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Bestsellers Section -->
-    <section class="section bestsellers-section" id="bestsellers">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Icons of Distinction</span>
-          <h2 class="section-title">Most Coveted Fragrances</h2>
-          <div class="gold-divider"></div>
-        </div>
-
-        <div class="product-grid" id="bestsellers-grid">
-          <!-- Filtered JS Injection -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Philosophy / Brand Story -->
-    <section class="section philosophy-section" id="philosophy">
-      <div class="container philosophy-container">
-        <div class="philosophy-image-wrap">
-          <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=80&w=1000" alt="Perfume Craftsmanship" loading="lazy">
-        </div>
-        <div class="philosophy-content">
-          <span class="section-subtitle">Our Philosophy</span>
-          <h2 class="section-title">Sensory Architecture</h2>
-          <p class="philosophy-text">
-            VELORAÉ was created around a simple belief: fragrance is not simply something you wear. It is something people remember.
-          </p>
-          <p class="philosophy-text">
-            Each blend is distilled in small batches using rare botanicals, precious resins, and pure essential oils sourced from traditional estates in Grasse, Florence, and Kyoto. We craft silent statements of identity.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fragrance Experience Section -->
-    <section class="section experience-section" id="experience">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">The Journey</span>
-          <h2 class="section-title">The Order Experience</h2>
-          <div class="gold-divider"></div>
-        </div>
-
-        <div class="experience-steps">
-          <div class="step-card">
-            <span class="step-num">01</span>
-            <h3 class="step-title">Discover</h3>
-            <p class="step-desc">Explore our curated archive of distinct olfactive compositions.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-num">02</span>
-            <h3 class="step-title">Choose</h3>
-            <p class="step-desc">Select your signature extrait de parfum and bottle size.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-num">03</span>
-            <h3 class="step-title">Order</h3>
-            <p class="step-desc">Seamless checkout transmitted directly via encrypted WhatsApp.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-num">04</span>
-            <h3 class="step-title">Experience</h3>
-            <p class="step-desc">Receive hand-sealed luxury packaging and pay on physical delivery.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust / Assurance Section -->
-    <section class="section trust-section">
-      <div class="container trust-grid">
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="22" height="18" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-          </div>
-          <h4 class="trust-title">Cash on Delivery</h4>
-          <p class="trust-desc">Pay safely upon receipt. Complete peace of mind guaranteed.</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <h4 class="trust-title">Quality Guaranteed</h4>
-          <p class="trust-desc">100% authentic high-concentration Extrait de Parfum compositions.</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <h4 class="trust-title">Carefully Packed</h4>
-          <p class="trust-desc">Hand-wrapped in velvet lined presentation cases with wax seals.</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-          </div>
-          <h4 class="trust-title">Fast Courier Dispatch</h4>
-          <p class="trust-desc">Express doorstep delivery within 2-4 business days nationwide.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Reflections</span>
-          <h2 class="section-title">Client Expressions</h2>
-          <div class="gold-divider"></div>
-        </div>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"VELORAÉ NOIR is unlike anything in my niche collection. The lingering dark amber notes draw non-stop inquiries wherever I go."</p>
-            <span class="testimonial-author">— Julian V., Architecture Director</span>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-text">"Ordering through WhatsApp with Cash on Delivery was effortless. Unboxing felt like opening a piece of high jewelry."</p>
-            <span class="testimonial-author">— Clara M., Fashion Editor</span>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-text">"AMBRE ROYALE exhibits longevity I have never experienced prior. 12 hours later, the heart notes remain refined and warm."</p>
-            <span class="testimonial-author">— Marcus T., Collector</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Accordion -->
-    <section class="section faq-section">
-      <div class="container faq-container">
-        <div class="section-header">
-          <span class="section-subtitle">Clarifications</span>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <div class="gold-divider"></div>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary class="faq-question">Do you offer Cash on Delivery?</summary>
-            <div class="faq-answer">
-              <p>Yes. All domestic orders are fulfilled via courier Cash on Delivery (COD). You simply inspect the package and pay the courier upon delivery.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">How can I place an order?</summary>
-            <div class="faq-answer">
-              <p>Select your perfume, click 'Order Now', fill in your delivery details, and click 'Send Order Details to WhatsApp'. Our concierges instantly receive your pre-formatted order summary.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">How long does delivery take?</summary>
-            <div class="faq-answer">
-              <p>Standard delivery takes between 2 to 4 business days depending on your target city. Express dispatch is executed within 24 hours of order confirmation.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Can I order multiple perfumes in one order?</summary>
-            <div class="faq-answer">
-              <p>Yes. You can add distinct products to your bag or specify additional quantities and fragrances within the checkout notes form.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">How can I contact customer support?</summary>
-            <div class="faq-answer">
-              <p>Direct WhatsApp messaging is active 24/7 for order updates, fragrance recommendations, and custom gifting inquiries.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Product Details Modal -->
-  <div class="modal-overlay" id="product-modal" aria-hidden="true">
-    <div class="modal-container" role="dialog" aria-modal="true">
-      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
-      
-      <div class="modal-content" id="modal-content-body">
-        <!-- JS Dynamic Injections -->
       </div>
     </div>
-  </div>
 
-  <!-- Checkout / Order Modal -->
-  <div class="modal-overlay" id="checkout-modal" aria-hidden="true">
-    <div class="modal-container checkout-container" role="dialog" aria-modal="true">
-      <button class="modal-close" id="checkout-close" aria-label="Close checkout">&times;</button>
-      
-      <div class="checkout-layout">
-        <div class="checkout-form-side">
-          <h3 class="checkout-title">Delivery Details</h3>
-          <p class="checkout-sub">Complete your information to format your WhatsApp order dispatch.</p>
-          
-          <form id="checkout-form" class="checkout-form">
-            <div class="form-group">
-              <label for="cust-name">Full Name *</label>
-              <input type="text" id="cust-name" required placeholder="Lord/Lady Alexander Wright">
-            </div>
+    <div class="hero-overlay"></div>
 
-            <div class="form-group">
-              <label for="cust-phone">Phone Number *</label>
-              <input type="tel" id="cust-phone" required placeholder="+1 (555) 000-0000">
-            </div>
+    <div class="hero-content">
+      <span class="hero-subtitle">HAUTE PARFUMERIE</span>
+      <h1 class="hero-title">Leave a Memory<br><em>Behind.</em></h1>
+      <p class="hero-description">
+        Discover fragrances crafted for those who refuse to be ordinary. Hand-blended rare botanicals and precious ouds designed to linger in space and time.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#collection" class="btn btn-primary">Explore Collection</a>
+        <a href="#bestsellers" class="btn btn-outline">Shop Bestsellers</a>
+      </div>
+    </div>
 
-            <div class="form-group">
-              <label for="cust-address">Complete Delivery Address *</label>
-              <textarea id="cust-address" rows="3" required placeholder="Street address, apartment, suite, landmark..."></textarea>
-            </div>
+    <!-- Infinite Continuous Ticker/Marquee Slider -->
+    <div class="hero-ticker-container">
+      <div class="hero-ticker-track">
+        <div class="ticker-item">VELORAÉ NOIR • EXTRACT DE PARFUM</div>
+        <div class="ticker-item">ÉCLAT • FLORAL SOLAR</div>
+        <div class="ticker-item">AMBRE ROYALE • RARE OUD</div>
+        <div class="ticker-item">LUMIÈRE • CITRUS AMBER</div>
+        <div class="ticker-item">VELORAÉ NOIR • EXTRACT DE PARFUM</div>
+        <div class="ticker-item">ÉCLAT • FLORAL SOLAR</div>
+        <div class="ticker-item">AMBRE ROYALE • RARE OUD</div>
+        <div class="ticker-item">LUMIÈRE • CITRUS AMBER</div>
+      </div>
+    </div>
+  </section>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cust-city">City *</label>
-                <input type="text" id="cust-city" required placeholder="Metropolis">
-              </div>
+  <!-- ==================== BRAND PHILOSOPHY ==================== -->
+  <section class="philosophy section-padding" id="philosophy">
+    <div class="container philosophy-grid">
+      <div class="philosophy-image-wrap">
+        <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=1000&auto=format&fit=crop" alt="Perfume Craftsmanship" class="philosophy-img" loading="lazy">
+        <div class="image-accent-border"></div>
+      </div>
+      <div class="philosophy-text-content">
+        <span class="section-tag">OUR PHILOSOPHY</span>
+        <h2 class="section-heading">Fragrance is not simply something you wear. It is how you are remembered.</h2>
+        <div class="gold-divider"></div>
+        <p class="body-text">
+          VELORAÉ was created around a singular, uncompromising vision: to revive the lost art of slow, high-concentration perfumery. Each blend requires up to 180 days of maturation in dark oak barrels.
+        </p>
+        <p class="body-text">
+          We source our Rose de Mai from Grasse, wild Oud from Cambodia, and Bergamot from Calabria. The result is an invisible aura of quiet luxury and distinction.
+        </p>
+        <div class="signature-block">
+          <span class="sig-title">Master Perfumer</span>
+          <span class="sig-name">Antoine de Velora</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <div class="form-group">
-                <label for="cust-maps">Google Maps Link (Optional)</label>
-                <input type="url" id="cust-maps" placeholder="https://maps.google.com/...">
-              </div>
-            </div>
+  <!-- ==================== PRODUCT COLLECTION ==================== -->
+  <section class="collection section-padding" id="collection">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">THE REPERTOIRE</span>
+        <h2 class="section-heading">Signature Extraits</h2>
+        <p class="section-sub">Pure perfume concentrates crafted in limited annual batches.</p>
+      </div>
 
-            <div class="form-group">
-              <label for="cust-notes">Additional Order Notes</label>
-              <textarea id="cust-notes" rows="2" placeholder="Gifting instructions, Gate access codes..."></textarea>
-            </div>
+      <div class="product-grid" id="productGrid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
 
-            <div class="cod-banner">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              <span>Payment Method: <strong>Cash on Delivery (Pay when your order arrives)</strong></span>
-            </div>
+  <!-- ==================== FRAGRANCE EXPERIENCE ==================== -->
+  <section class="experience section-padding" id="experience">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">THE JOURNEY</span>
+        <h2 class="section-heading">How You Receive Distinction</h2>
+      </div>
 
-            <button type="submit" class="btn btn-primary btn-full">
-              <span>Send Order Details to WhatsApp</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </button>
-          </form>
+      <div class="experience-steps">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <h3 class="step-title">Discover</h3>
+          <p class="step-desc">Explore our olfactory compositions and select the scent that aligns with your presence.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <h3 class="step-title">Order Direct</h3>
+          <p class="step-desc">Provide your shipping coordinates without needing online payment cards.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <h3 class="step-title">WhatsApp Dispatch</h3>
+          <p class="step-desc">Your order details are instantly formatted and dispatched to our private concierge.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <h3 class="step-title">COD Delivery</h3>
+          <p class="step-desc">Unbox your silk-wrapped fragrance at your doorstep and pay Cash on Delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div id="whatsapp-notice" class="whatsapp-notice" style="display: none;">
-            <p><strong>Your order details are ready in WhatsApp.</strong></p>
-            <p>Please send the pre-filled message in the opened tab to confirm your delivery with our concierge team.</p>
+  <!-- ==================== TRUST & VALUE ==================== -->
+  <section class="trust section-padding">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+            <line x1="2" y1="10" x2="22" y2="10"></line>
+          </svg>
+        </div>
+        <h4>Cash on Delivery</h4>
+        <p>Inspect your delivery before making cash payment at your doorstep.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <h4>Guaranteed Pure</h4>
+        <p>30% Extrait concentration ensures exceptional projection and 14+ hour wear.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+        </div>
+        <h4>Velvet Coffret</h4>
+        <p>Housed in heavy magnetic glass and signature wax-sealed presentation boxes.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </div>
+        <h4>WhatsApp Support</h4>
+        <p>Direct line to our fragrance advisors for bespoke consultation and order assistance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">PATRONS</span>
+        <h2 class="section-heading">Voices of Distinction</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="quote">"VELORAÉ NOIR has become my signature. Wherever I go, people ask what I'm wearing. It leaves an indelible mark on a room."</p>
+          <div class="author">
+            <span class="author-name">Lady Victoria H.</span>
+            <span class="author-location">London, UK</span>
           </div>
         </div>
-
-        <div class="checkout-summary-side">
-          <h3 class="checkout-title">Order Summary</h3>
-          <div id="checkout-summary-items" class="summary-items-list">
-            <!-- Dynamic JS Injection -->
+        <div class="testimonial-card">
+          <p class="quote">"Ordering via WhatsApp and paying Cash on Delivery was seamless. The packaging is pure museum-grade luxury."</p>
+          <div class="author">
+            <span class="author-name">Marcus Vance</span>
+            <span class="author-location">Dubai, UAE</span>
           </div>
-
-          <div class="summary-totals">
-            <div class="total-row">
-              <span>Subtotal</span>
-              <span id="summary-subtotal">$0.00</span>
-            </div>
-            <div class="total-row">
-              <span>Delivery Fee</span>
-              <span id="summary-delivery">COMPLIMENTARY</span>
-            </div>
-            <div class="total-row final-total">
-              <span>Total Payable (COD)</span>
-              <span id="summary-total">$0.00</span>
-            </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">"The depth of AMBRE ROYALE is unmatched. You can feel the concentration of genuine oud and ambergris immediately."</p>
+          <div class="author">
+            <span class="author-name">Elena Rostova</span>
+            <span class="author-location">Zurich, Switzerland</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="footer" id="footer">
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section class="faq section-padding" id="faq">
+    <div class="container container-narrow">
+      <div class="section-header text-center">
+        <span class="section-tag">INQUIRIES</span>
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How does the Cash on Delivery (COD) process work?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>You place your order through our website checkout, which formats your request and sends it straight to our WhatsApp sales line. Once confirmed, we dispatch your bottle. You pay cash directly to the courier upon delivery.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What is the concentration of VELORAÉ fragrances?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>All our creations are <em>Extrait de Parfum</em> concentration (30% pure fragrance oils). This guarantees superior sillage and endurance exceeding 14 hours on skin.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How long does delivery take?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Orders are dispatched within 24 hours. Express delivery typically arrives within 2 to 4 business days depending on your city location.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Can I sample fragrances before committing to a full bottle?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Every full bottle order includes a complimentary 2ml discovery vial of the same scent. You may test the vial first; if unsuited, return the sealed full bottle effortlessly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#" class="brand-logo">VELORAÉ</a>
+      <div class="footer-col brand-col">
+        <a href="#" class="nav-logo">
+          <span class="logo-text">VELORAÉ</span>
+          <span class="logo-sub">PARIS</span>
+        </a>
         <p class="footer-tagline">"The Scent of Distinction."</p>
-        <p class="footer-desc">Crafting timeless olfactive memories through rare botanical extractions and artisanal bottling.</p>
+        <p class="footer-copy">&copy; 2026 VELORA&Eacute; Parfums. All Rights Reserved.</p>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-heading">Navigation</h4>
+        <h5 class="footer-title">Navigation</h5>
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#collection">Collection</a></li>
-          <li><a href="#bestsellers">Bestsellers</a></li>
           <li><a href="#philosophy">Our Philosophy</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-heading">Customer Care</h4>
+        <h5 class="footer-title">Client Care</h5>
         <ul>
-          <li><a href="#experience">Cash On Delivery</a></li>
-          <li><a href="#experience">Shipping Policy</a></li>
-          <li><a href="#experience">Privacy & Terms</a></li>
-          <li><a href="#experience">Authenticity Guarantee</a></li>
+          <li><a href="#faq">Shipping & COD</a></li>
+          <li><a href="#" id="directWhatsappFooter">WhatsApp Concierge</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-heading">Concierge</h4>
-        <p class="footer-contact-info">Direct WhatsApp Concierge ordering available 24/7 nationwide.</p>
-        <span class="cod-badge">100% Cash on Delivery</span>
+        <h5 class="footer-title">Concierge</h5>
+        <p class="footer-text">Direct Inquiries & WhatsApp Orders:</p>
+        <p class="footer-phone" id="footerPhoneDisplay">+1 (800) 835-6723</p>
+        <p class="footer-badge">Cash On Delivery Available</p>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 VELORAÉ Haute Parfumerie. All Rights Reserved.</p>
     </div>
   </footer>
 
+  <!-- ==================== PRODUCT DETAILS MODAL ==================== -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-overlay" data-close="productModal"></div>
+    <div class="modal-container modal-lg">
+      <button class="modal-close" data-close="productModal">&times;</button>
+      <div class="modal-body product-modal-content" id="productModalContent">
+        <!-- Dynamically Populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer-panel">
+      <div class="cart-header">
+        <h3>Your Shopping Bag</h3>
+        <button class="cart-close" id="cartCloseBtn">&times;</button>
+      </div>
+
+      <div class="cart-items" id="cartItemsList">
+        <!-- Dynamically Populated -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery (COD)</span>
+          <span id="cartDelivery">$15.00</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Total Amount</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <p class="cod-note"> Payment method: <strong>Cash on Delivery</strong></p>
+        <button class="btn btn-primary btn-block" id="proceedCheckoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT MODAL ==================== -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-overlay" data-close="checkoutModal"></div>
+    <div class="modal-container">
+      <button class="modal-close" data-close="checkoutModal">&times;</button>
+      <div class="modal-header text-center">
+        <span class="section-tag">CASH ON DELIVERY</span>
+        <h3 class="modal-title">Complete Your Order</h3>
+        <p class="modal-sub">Enter your details. Your order will be sent to WhatsApp for instant confirmation.</p>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" required placeholder="e.g. Lord Harrison Vance">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number *</label>
+            <input type="tel" id="phoneNumber" required placeholder="+1 234 567 8900">
+          </div>
+          <div class="form-group">
+            <label for="cityName">City *</label>
+            <input type="text" id="cityName" required placeholder="e.g. Dubai / London / NY">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="deliveryAddress">Complete Street Address *</label>
+          <textarea id="deliveryAddress" rows="2" required placeholder="Apartment/Villa No., Street, District"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="mapsLink">Google Maps Link (Optional)</label>
+          <input type="url" id="mapsLink" placeholder="https://maps.google.com/?q=...">
+        </div>
+
+        <div class="form-group">
+          <label for="orderNotes">Special Delivery Notes (Optional)</label>
+          <input type="text" id="orderNotes" placeholder="e.g. Call before arrival / leave with gate concierge">
+        </div>
+
+        <div class="checkout-summary-box">
+          <div class="summary-heading">Order Summary</div>
+          <div id="checkoutItemsPreview"></div>
+          <div class="summary-line total-line">
+            <span>Total Payable COD:</span>
+            <strong id="checkoutGrandTotal">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="payment-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Cash on Delivery — Pay when product is received.</span>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp btn-block">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.176 5.297-1.389c1.467.8 3.118 1.22 4.773 1.221h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.038-5.176-2.925-7.062a9.924 9.924 0 0 0-7.064-2.946zm.001 1.662c4.588 0 8.324 3.736 8.326 8.324 0 2.223-.866 4.312-2.439 5.885-1.574 1.574-3.664 2.441-5.887 2.441h-.003c-1.47 0-2.915-.395-4.179-1.144l-.3-.178-3.109.815.829-3.031-.196-.312a8.286 8.286 0 0 1-1.269-4.48c.001-4.588 3.738-8.32 8.327-8.32z"/>
+          </svg>
+          Send Order Details to WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== WHATSAPP CONFIRMATION PROMPT ==================== -->
+  <div class="modal" id="whatsappPromptModal" aria-hidden="true">
+    <div class="modal-overlay" data-close="whatsappPromptModal"></div>
+    <div class="modal-container text-center">
+      <button class="modal-close" data-close="whatsappPromptModal">&times;</button>
+      <div class="modal-status-icon">💬</div>
+      <h3 class="modal-title">WhatsApp Ready</h3>
+      <p class="body-text">
+        Your luxury order details have been formatted and copied.
+      </p>
+      <div class="instruction-box">
+        Please tap <strong>"Send"</strong> inside WhatsApp to finalize your dispatch order with our concierge.
+      </div>
+      <p class="sub-text-muted">No online payment was charged. Payment will be collected in cash upon physical delivery.</p>
+      <button class="btn btn-primary" data-close="whatsappPromptModal" style="margin-top: 20px;">Return to Boutique</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
